@@ -7,11 +7,11 @@
   phx_submit: "save" %>
 
   <%= label f, :name %>
-  <%= text_input f, :name %>
+  <%= text_input f, :name, phx_debounce: "blur" %>
   <%= error_tag f, :name %>
 
   <%= label f, :org %>
-  <%= text_input f, :org %>
+  <%= text_input f, :org, phx_debounce: "blur" %>
   <%= error_tag f, :org %>
 
   <%= submit "Save", phx_disable_with: "Saving..." %>
